@@ -1,6 +1,6 @@
 
 exports.min = function min (array) {
-  if(array.length <= 0 || !Array.isArray(array)){return 0;}
+  if(array.length <= 0){return 0;}
   else{
       let minN = array[0];
       for(let i = 0; i < array.length; i++){
@@ -13,7 +13,7 @@ exports.min = function min (array) {
 }
 
 exports.max = function max (array) {
-  if(array.length <= 0 || !Array.isArray(array)){return 0;}
+  if(array.length <= 0){return 0;}
   else{
       let maxN = array[0];
       for(let i = 0; i < array.length; i++){
@@ -26,9 +26,11 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  if(array.length <= 0 || !Array.isArray(array)){return 0;}
-  let avgN = 0;
-  avgN = (array.reduce((sum, current) => sum + current, 0)) / array.length;
-  console.log(avg);
-  return avgN;
+  if(array.length <= 0){return 0;}
+  else {
+      let avgN = 0;
+      avgN = (array.reduce((sum, current) => sum + current, 0)) / array.length;
+      console.log(avg);
+      return avgN;
+  }
 }
