@@ -28,9 +28,13 @@ exports.max = function max (array) {
 exports.avg = function avg (array) {
   if(array.length <= 0){return 0;}
   else {
-      let avgN = 0;
-      avgN = (array.reduce((sum, current) => sum + current, 0)) / array.length;
-      console.log(avg);
+      let sum = 0;
+      let avgN
+      for(let i = 0; i < array.length; i++){
+        sum = sum + array[i];
+        avgN = sum / array.length;
+      }
+      console.log(avgN);
       return avgN;
   }
 }
