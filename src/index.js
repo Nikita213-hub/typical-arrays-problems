@@ -2,26 +2,13 @@
 exports.min = function min (array) {
   if(array.length <= 0){return 0;}
   else{
-      let minN = array[0];
-      for(let i = 0; i < array.length; i++){
-        if(array[i] < minN){
-          minN = array[i];
-        }
-      }
-  return minN;
-  }
+    return Math.min(... array);
 }
 
 exports.max = function max (array) {
   if(array.length <= 0){return 0;}
   else{
-      let maxN = array[0];
-      for(let i = 0; i < array.length; i++){
-        if(array[i] < maxN){
-          maxN = array[i];
-        }
-      }
-  return maxN;
+    return Math.max(... array);
   }
 }
 
