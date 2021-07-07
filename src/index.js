@@ -1,24 +1,34 @@
 
 exports.min = function min (array) {
   if(array.length <= 0){return 0;}
-  let min = array.reduce(function(a, b) {
-    console.log(Math.min(a, b));
-    return Math.min(a, b);
-  })
+  else{
+      let minN = array[0];
+      for(let i = 0; i < array.length; i++){
+        if(array[i] < minN){
+          minN = array[i];
+        }
+      }
+  return minN;
+  }
 }
 
 exports.max = function max (array) {
   if(array.length <= 0){return 0;}  
-  let max = array.reduce(function(a, b) {
-    console.log(Math.max(a, b));
-    return Math.max(a, b);
-  })
+  else{
+      let maxN = array[0];
+      for(let i = 0; i < array.length; i++){
+        if(array[i] < maxN){
+          maxN = array[i];
+        }
+      }
+  return maxN;
+  }
 }
 
 exports.avg = function avg (array) {
   if(array.length <= 0){return 0;}
-  let avg = 0;
-  avg = (array.reduce((sum, current) => sum + current, 0)) / array.length;
+  let avgN = 0;
+  avgN = (array.reduce((sum, current) => sum + current, 0)) / array.length;
   console.log(avg);
-  return avg;
+  return avgN;
 }
